@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cafe - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="LOGO.png" alt="LOGO">
+        <h1>Welcome to My Cafe</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Contact Us</h2>
+        <p>For reservations, inquiries, or just to say hello, feel free to reach out to us!</p>
+        <p>Email: info@mycafe.com</p>
+        <p>Phone: (123) 456-7890</p>
+        
+        <h3>Rate Your Cafe Experience</h3>
+        <p>We value your feedback. Please take a moment to share your thoughts about your experience at My Cafe.</p>
+        
+        <form action="submit_rating.php" method="post">
+            <label for="rating">Rate My Cafe (1-5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+            
+            <label for="feedback">Tell us about your experience:</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea>
+            
+            <button type="submit">Submit Rating</button>
+        </form>
+
+
+        <div id="thanks-message" style="display: none;">
+            <h3>Thanks for Your Feedback!</h3>
+            <p>We appreciate you taking the time to share your thoughts with us.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p class="S"><b>X: My_cafe</b></p>
+        <p class="P"><b>Instagram: My_cafe</b></p>
+        <p class="LB"><b>Telegram: My_cafe</b></p>
+    </footer>
+
+    <script>
+    
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('thanks-message').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
